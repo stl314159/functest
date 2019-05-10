@@ -1,2 +1,10 @@
+stages:
+- name: deploy
+  steps:
+  - runScriptConfig:
+      image: gcc:latest
+      shellScript: |-
+        #!/bin/bash
+        kubeless function deploy func --runtime python2.7 --from-file func.py --handler func.handler
 timeout: 60
 notification: {}
