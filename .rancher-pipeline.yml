@@ -2,7 +2,7 @@ stages:
 - name: deploy
   steps:
   - runScriptConfig:
-      image: gcc:latest
+      image: python:latest
       shellScript: |-
         #!/bin/bash
         kubeless function deploy func --runtime python2.7 --from-file func.py --handler func.handler
