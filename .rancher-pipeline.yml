@@ -2,6 +2,6 @@ stages:
 - name: deploy
   steps:
   - applyYamlConfig:
-      path: ./deployment.yaml
+      path: ./function.yaml
 timeout: 60
 notification: {}
