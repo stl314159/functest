@@ -11,7 +11,7 @@ spec:
   deps: ""
   function: |
     def foo(event, context):
-        return "hello world"
+        return "hello world2"
   function-content-type: text
   handler: helloget.foo
   runtime: python2.7
