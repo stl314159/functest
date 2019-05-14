@@ -7,11 +7,10 @@ metadata:
   name: get-python
   namespace: default
 spec:
-  checksum: sha256:d251999dcbfdeccec385606fd0aec385b214cfc74ede8b6c9e47af71728f6e9a
   deps: ""
   function: |
     def foo(event, context):
-        return "hello world"
+        return "hello world4"
   function-content-type: text
   handler: helloget.foo
   runtime: python2.7
