@@ -1,7 +1,14 @@
 stages:
+- name: build
+  steps:
+  - runScriptConfig:
+      image: alpine:latest
+      shellScript: |-
+        echo "Hello world"
+        ls -l
 - name: deploy
   steps:
   - applyYamlConfig:
-      path: ./function.yaml
+      path: ./deployment.yaml
 timeout: 60
 notification: {}
