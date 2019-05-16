@@ -21,6 +21,6 @@ spec:
       targetPort: 8080
     selector:
       created-by: kubeless
-      function: get-python
+      function: newtest
     type: ClusterIP
   timeout: "180"
