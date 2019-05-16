@@ -10,7 +10,7 @@ spec:
   deps: ""
   #checksum: sha256:${FUNCHASH}
   function: |
-  {{ .Files.Get "func.py" | indent 4 }}
+{{ .Files.Get "func.py" | indent 4 }}
   function-content-type: text
   handler: newtest.hello
   runtime: python2.7
