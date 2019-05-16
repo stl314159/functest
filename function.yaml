@@ -9,7 +9,8 @@ metadata:
 spec:
   deps: ""
   checksum: sha256:${FUNCHASH}
-  function: ${FUNCTEXT}
+  function: |
+    {{ .Files.Get "func.py" | indent 2 }}
   function-content-type: text
   handler: newtest.hello
   runtime: python2.7
