@@ -8,7 +8,7 @@ stages:
         FUNCZIP=deploy.zip
         zip deploy.zip func.py
         ls -l
-        FUNCHASH=sha256sum deploy.zip
+        sha256sum ./deploy.zip
         envsubst < function.yaml > deployment.yaml
 - name: deploy
   steps:
