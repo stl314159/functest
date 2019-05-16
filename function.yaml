@@ -8,10 +8,9 @@ metadata:
   namespace: default
 spec:
   deps: ""
-  function: |
-    def foo(event, context):
-        return "hello world4"
-  function-content-type: text
+  checksum: sha256:${FUNCHASH}
+  function: ${FUNCZIP}
+  function-content-type: url+zip
   handler: helloget.foo
   runtime: python2.7
   service:
@@ -25,4 +24,3 @@ spec:
       function: get-python
     type: ClusterIP
   timeout: "180"
-
