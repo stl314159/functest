@@ -8,9 +8,9 @@ metadata:
   namespace: default
 spec:
   deps: ""
-  # checksum: sha256:${FUNCHASH}
-  function: ${FUNCZIP}
-  function-content-type: base64+zip
+  checksum: sha256:${FUNCHASH}
+  function: ${FUNCTEXT}
+  function-content-type: text
   handler: newtest.hello
   runtime: python2.7
   service:
