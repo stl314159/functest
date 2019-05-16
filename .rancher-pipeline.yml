@@ -9,6 +9,7 @@ stages:
         zip deploy.zip func.py
         FUNCHASH=`sha256sum ./deploy.zip | awk '{print $1}'`
         envsubst < function.yaml > deployment.yaml
+        cat deployment.yaml
 - name: deploy
   steps:
   - applyYamlConfig:
