@@ -7,8 +7,7 @@ stages:
         apk update && apk add zip && apk add gettext && apk add coreutils
         FUNCZIP=deploy.zip
         zip deploy.zip func.py
-        ls -l
-        sha256sum ./deploy.zip
+        FUNCHASH=`sha256sum ./deploy.zip | awk '{print $1}'`
         envsubst < function.yaml > deployment.yaml
 - name: deploy
   steps:
