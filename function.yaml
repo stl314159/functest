@@ -8,7 +8,7 @@ metadata:
   namespace: default
 spec:
   deps: ""
-  checksum: sha256:${FUNCHASH}
+  # checksum: sha256:${FUNCHASH}
   function: ${FUNCZIP}
   function-content-type: text+zip
   handler: helloget.hello
