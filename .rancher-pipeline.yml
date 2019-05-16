@@ -5,8 +5,8 @@ stages:
       image: alpine:latest
       shellScript: |-
         apk update && apk add zip && apk add gettext && apk add coreutils
-        export FUNCZIP=newtest.zip
         zip newtest.zip func.py
+        export FUNCZIP=`base64 newtest.zip`
         #export FUNCHASH=`sha256sum ./deploy.zip | awk '{print $1}'`
         export FUNCHASH=`sha256sum ./func.py | awk '{print $1}'`
         envsubst < function.yaml > deployment.yaml
