@@ -11,7 +11,7 @@ spec:
   checksum: sha256:${FUNCHASH}
   function: ${FUNCZIP}
   function-content-type: url+zip
-  handler: helloget.foo
+  handler: helloget.hello
   runtime: python2.7
   service:
     ports:
