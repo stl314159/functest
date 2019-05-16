@@ -4,8 +4,9 @@ stages:
   - runScriptConfig:
       image: alpine:latest
       shellScript: |-
-        echo "Hello world"
-        ls -l
+        zip deploy.zip func.py
+        md5=($(sha256sum deploy.zip))
+        envsubst < function2.yaml > deployment.yaml
 - name: deploy
   steps:
   - applyYamlConfig:
