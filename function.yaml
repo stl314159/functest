@@ -10,7 +10,7 @@ spec:
   deps: ""
   checksum: sha256:${FUNCHASH}
   function: ${FUNCZIP}
-  function-content-type: url+zip
+  function-content-type: text+zip
   handler: helloget.hello
   runtime: python2.7
   service:
