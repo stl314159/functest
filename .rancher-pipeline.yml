@@ -4,10 +4,10 @@ stages:
   - runScriptConfig:
       image: alpine:latest
       shellScript: |-
-        apk update && apk add zip && apk add gettext
+        apk update && apk add zip && apk add gettext && apk add coreutils
         FUNCZIP=deploy.zip
-        zip $FUNCZIP func.py
-        FUNCHASH=($(sha256sum $FUNCZIP))
+        zip deploy.zip func.py
+        FUNCHASH=sha256sum deploy.zip
         envsubst < function.yaml > deployment.yaml
 - name: deploy
   steps:
