@@ -1,3 +1,3 @@
 def hello(event, context):
-    event['data'] += "abcd"
+    event['data'] += " test"
     return event['data']
