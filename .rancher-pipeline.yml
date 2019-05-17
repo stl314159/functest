@@ -2,15 +2,9 @@ stages:
 - name: build
   steps:
   - runScriptConfig:
-      image: alpine:latest
+      image: alpine/helm:latest
       shellScript: |-
-        apk update && apk add zip && apk add gettext && apk add coreutils
-        #zip newtest.zip func.py
-        #export FUNCZIP=`base64 newtest.zip`
-        export FUNCTEXT=`cat func.py`
-        #export FUNCHASH=`sha256sum ./deploy.zip | awk '{print $1}'`
-        export FUNCHASH=`sha256sum ./func.py | awk '{print $1}'`
-        envsubst < function.yaml > deployment.yaml
+        helm template ./functest > deployment.yaml
         cat deployment.yaml
 - name: deploy
   steps:

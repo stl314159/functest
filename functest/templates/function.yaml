@@ -8,7 +8,7 @@ metadata:
   namespace: default
 spec:
   deps: ""
-  #checksum: sha256:${FUNCHASH}
+  checksum: sha256:{{ .Files.Get "func.py" | sha256sum }}
   function: |
 {{ .Files.Get "func.py" | indent 4 }}
   function-content-type: text
