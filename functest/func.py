@@ -1,3 +1,3 @@
 def hello(event, context):
-    event['data'] += " test1"
+    event['data'] += " test webhook"
     return event['data']
