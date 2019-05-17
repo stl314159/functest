@@ -1,2 +1,2 @@
 def hello(event, context):
-    return event['data' + '1']
+    return event['data']
